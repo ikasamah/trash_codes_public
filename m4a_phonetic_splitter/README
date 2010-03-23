@@ -16,4 +16,12 @@ $ sudo easy_install mutagen
 
 usage
 -----
+Usage: m4a_phonetic_splitter.py [options] iTunes_library_path
+
+Options:
+  -h, --help     show this help message and exit
+  -o FILE        Place dumped data into FILE (default: ./phonetics.dump)
+  -r FILE        Revert iTunes library with this dumped FILE
+  -n, --dry-run  Don't actually do anyting
+  -v, --verbose  Run verbosely
 
