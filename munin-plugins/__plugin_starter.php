@@ -3,14 +3,15 @@
 
 // to get values set in plugin-conf.d
 // $_ENV['key'];
-if ($argc < 2) {
-    print_values();
-} elseif ($argv[1] === 'config') {
+$arg1 = isset($argv[1]) ? $argv[1] : null;
+if ($arg1 === 'config') {
     print_config();
-} elseif ($argv[1] === 'autoconf') {
+} elseif ($arg1 === 'autoconf') {
     print_autoconf();
+} else {
+    print_values();
 }
-exit();
+exit(0);
 
 function print_values()
 {
@@ -32,6 +33,7 @@ function print_config()
 
 function print_autoconf()
 {
+    // print yes if this script runable in this system
     echo "yes\n";
 }
 

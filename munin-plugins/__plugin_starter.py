@@ -7,12 +7,15 @@ import sys
 def main():
     # to get values set in plugin-conf.d
     # var = os.environ['key']
-    if len(sys.argv) < 2:
-        print_plugin_values()
-    elif sys.argv[1] == "config":
+    arg1 = None
+    if len(sys.argv) > 1:
+        arg1 = sys.argv[1]
+    if arg1 == "config":
         print_config()
-    elif sys.argv[1] == "autoconf":
+    elif arg1 == "autoconf":
         print_autoconf()
+    else:
+        print_plugin_values()
     sys.exit()
 
 def print_plugin_values():
@@ -30,6 +33,7 @@ def print_config() :
     #print 'total.draw LINE2'
 
 def print_autoconf():
+    # print yes if this script is runnable on this system
     print 'yes'
 
 
