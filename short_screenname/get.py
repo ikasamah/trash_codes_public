@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
+# discover most shoten twitter screenname
 # require python 2.6
 
 import sys
@@ -42,7 +43,6 @@ def increment_string(s):
             return VALID_CHARS[0] * 2
         else:
             return increment_string(s[:-1]) + VALID_CHARS[0]
-        pass
     else:
         return s[:-1] + VALID_CHARS[pos+1]
 
